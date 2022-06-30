@@ -7,6 +7,9 @@ const countdown = document.getElementById('countUp');
 const startBtn = document.getElementById('start');
 const stopBtn = document.getElementById('stop');
 const resetBtn = document.getElementById('reset');
+const pomodoroBtn = document.getElementById('pomodoro');
+const shortBreakBtn = document.getElementById('shortBreak');
+const longBreakBtn = document.getElementById('longBreak');
 
 startBtn.addEventListener('click', () => {
     counting = setInterval(updateCountUp, 1000);
@@ -20,6 +23,24 @@ resetBtn.addEventListener('click', () => {
     clearInterval(counting);
     countdown.innerHTML = `00:00`;
     time = 0;
+})
+
+pomodoroBtn.addEventListener('click', () => {
+    pomodoroBtn.style.backgroundColor = 'red';
+    shortBreakBtn.style.backgroundColor = 'grey';
+    longBreakBtn.style.backgroundColor = 'grey';
+})
+
+shortBreakBtn.addEventListener('click', () => {
+    shortBreakBtn.style.backgroundColor = 'red';
+    pomodoroBtn.style.backgroundColor = 'grey';
+    longBreakBtn.style.backgroundColor = 'grey';
+})
+
+longBreakBtn.addEventListener('click', () => {
+    longBreakBtn.style.backgroundColor = 'red';
+    pomodoroBtn.style.backgroundColor = 'grey';
+    shortBreakBtn.style.backgroundColor = 'grey';
 })
 
 

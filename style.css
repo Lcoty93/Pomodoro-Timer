@@ -1,3 +1,7 @@
 #countUp {
     font-size: 36px;
 }
+
+#pomodoro, #shortBreak, #longBreak {
+    background-color: grey;
+}
