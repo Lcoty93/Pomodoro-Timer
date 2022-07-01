@@ -1,7 +1,25 @@
+* {
+    font-style: arial;
+}
+
 #countUp {
     font-size: 36px;
 }
 
-#pomodoro, #shortBreak, #longBreak {
+#pomodoro {
+    background-color: red;
+}
+
+#shortBreak, #longBreak {
     background-color: grey;
+}
+
+#start {
+    background-color: green;
+    color: white;
+}
+
+#stop {
+    background-color: red;
+    color: white;
 }

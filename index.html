@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pomodoro Timer</title>
+    <title>Count Up Pomodoro Timer</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -20,6 +20,19 @@
         <button id="start">Start</button>
         <button id="stop">Stop</button>
         <button id="reset">Reset</button>
+        <input type="checkbox" id="mute"><span>Mute</span>
+    </div>
+    <p id="output"></p>
+    <div id="rules">
+        <p>Pomodoro Timer Technique has six steps</p>
+        <ol>
+            <li>Decide on the task to be done.</li>
+            <li>Click Start (this will start a 25 minute timer).</li>
+            <li>Work on the task till timer goes off.</li>
+            <li>End work when the timer rings and click the Short Break button<br> and click start (this will start a 5 minute timer).</li>
+            <li>Repeat this four times.</li>
+            <li>Then press the Long Break button and click start (this will start a 10 minute timer).</li>
+        </ol>
     </div>
     <script src="javascript.js"></script>
 </body>
