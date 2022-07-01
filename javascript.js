@@ -83,17 +83,17 @@ function updateCountUp() {
 
 function timesUp() {
       //301 short break 
-    if(time == 6 & shortBreakBtnClicked == true) {
+    if(time == 301 & shortBreakBtnClicked == true) {
         output.innerHTML = "TAKE A BREAK!";
         disableBtns();
         clearInterval(counting);
         muteBtnPressed();
-    } else if(time == 11 & longBreakBtnClicked == true) { // 601 long break
+    } else if(time == 601 & longBreakBtnClicked == true) { // 601 long break
         output.innerHTML = "TAKE A BREAK!";
         disableBtns();
         clearInterval(counting);
         muteBtnPressed();
-    } else if(time == 26 & pomodoroBtnClicked == true) { // Pomodoro 1501
+    } else if(time == 1501 & pomodoroBtnClicked == true) { //1501 Pomodoro 
         output.innerHTML = "TAKE A BREAK!";
         disableBtns();
         clearInterval(counting);
