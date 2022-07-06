@@ -1,7 +1,6 @@
 const startingMinutes = 0;
 let time = startingMinutes * 60;
 let counting;
-let timer = 25;
 let pomodoroBtnClicked = true;
 let shortBreakBtnClicked = false;
 let longBreakBtnClicked = false;
@@ -64,7 +63,7 @@ shortBreakBtn.addEventListener('click', () => {
 
 longBreakBtn.addEventListener('click', () => {
     resetTime();
-    
+    startCounter();
     
     pomodoroBtn.classList.remove('btn-primary');
     pomodoroBtn.classList.add('btn-secondary');
@@ -94,24 +93,28 @@ function updateCountUp() {
 }
 
 function timesUp() {
-      //301 short break 
-    if(time == 301 & shortBreakBtnClicked == true) {
-        output.innerHTML = "TAKE A BREAK!";
+    if(time == 301 & shortBreakBtnClicked == true) { //301 short break 
+        breakMsg();
         disableBtns();
         clearInterval(counting);
         muteBtnPressed();
-    } else if(time == 601 & longBreakBtnClicked == true) { // 601 long break
-        output.innerHTML = "TAKE A BREAK!";
+    } else if(time == 601 & longBreakBtnClicked == true) { //601 long break
+        breakMsg();
         disableBtns();
         clearInterval(counting);
         muteBtnPressed();
     } else if(time == 1501 & pomodoroBtnClicked == true) { //1501 Pomodoro 
-        output.innerHTML = "TAKE A BREAK!";
+        breakMsg();
         disableBtns();
         clearInterval(counting);
         muteBtnPressed();
     }
     
+}
+
+function breakMsg() {
+    output.innerHTML = "TAKE A BREAK!";
+    output.classList.add('alert', 'alert-warning', 'text-center', 'h1');
 }
 
 function resetTime() {
@@ -122,6 +125,7 @@ function resetTime() {
     enableBtns();
     audio.pause();
     audio.load();
+    output.classList.remove('alert', 'alert-warning');
 }
 
 function startCounter() {

@@ -24,18 +24,48 @@
             <button id="reset" class="btn btn-lg btn-secondary">Reset</button>
             <input type="checkbox" id="mute"><span>Mute</span>
         </div>
-        <p id="output"></p>
-    </div>
-    <div id="rules">
-        <p>Pomodoro Timer Technique has six steps</p>
-        <ol>
-            <li>Decide on the task to be done.</li>
-            <li>Click Start (this will start a 25 minute timer).</li>
-            <li>Work on the task till timer goes off.</li>
-            <li>End work when the timer rings and click the Short Break button<br> and click start (this will start a 5 minute timer).</li>
-            <li>Repeat this four times.</li>
-            <li>Then press the Long Break button and click start (this will start a 10 minute timer).</li>
-        </ol>
+        
+    <!--Alert message-->
+    <p id="output"></p>
+
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Count Up Pomodoro Timer Rules
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <ol>
+                    <li>Decide on the task to be done.</li>
+                    <li>Click Start (this will start a 25 minute timer).</li>
+                    <li>Work on the task till timer goes off.</li>
+                    <li>End work when the timer rings and click the Short Break button<br> and click start (this will start a 5 minute timer).</li>
+                    <li>Repeat this four times.</li>
+                    <li>Then press the Long Break button and click start (this will start a 10 minute timer).</li>
+                </ol>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Benefits of Counting UP instead of down with Pomodoro
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+               <p>
+                 <strong>Pomodoro-Timer with a twist! The timer that counts UP and not down.</strong> Having a counter that counts down may tend
+                 Having a counter that counts down may tend to cause stress; instead try having a counter that counts up! Now you are aware of 
+                 the time and not set on a deadline. This app provides you with 25 minutes of dedicated focus, instead of the impending feeling 
+                 of a time limit. If you have anxiety or become stressed when time is running out, this “stopwatch” will feel way better. 
+                 Give it a try!
+                </p>
+              </div>
+            </div>
+          </div>
     </div>
     <script src="bootstrap/js/bootstrap.bundle.js"></script>
     <script src="javascript.js"></script>
