@@ -19,7 +19,7 @@ const output = document.getElementById('output');
 const muteBtn = document.getElementById('mute');
 
 startBtn.addEventListener('click', () => {
-    counting = setInterval(updateCountUp, 1000);
+    startCounter();
 })
 
 stopBtn.addEventListener('click', () => {
@@ -27,19 +27,19 @@ stopBtn.addEventListener('click', () => {
 })
 
 resetBtn.addEventListener('click', () => {
-    clearInterval(counting);
-    countdown.innerHTML = `00:00`;
-    time = 0;
-    output.innerHTML = "";
-    enableBtns();
-    audio.pause();
-    audio.load();
+    resetTime();
 })
 
 pomodoroBtn.addEventListener('click', () => {
-    pomodoroBtn.style.backgroundColor = 'red';
-    shortBreakBtn.style.backgroundColor = 'grey';
-    longBreakBtn.style.backgroundColor = 'grey';
+    resetTime();
+    startCounter();
+    
+    pomodoroBtn.classList.remove('btn-secondary');
+    pomodoroBtn.classList.add('btn-primary');
+    shortBreakBtn.classList.remove('btn-primary');
+    shortBreakBtn.classList.add('btn-secondary');
+    longBreakBtn.classList.remove('btn-primary');
+    longBreakBtn.classList.add('btn-secondary');
 
     pomodoroBtnClicked = true;
     shortBreakBtnClicked = false;
@@ -47,9 +47,15 @@ pomodoroBtn.addEventListener('click', () => {
 })
 
 shortBreakBtn.addEventListener('click', () => {
-    shortBreakBtn.style.backgroundColor = 'red';
-    pomodoroBtn.style.backgroundColor = 'grey';
-    longBreakBtn.style.backgroundColor = 'grey';
+    resetTime();
+    startCounter();
+
+    pomodoroBtn.classList.remove('btn-primary');
+    pomodoroBtn.classList.add('btn-secondary');
+    shortBreakBtn.classList.remove('btn-secondary');
+    shortBreakBtn.classList.add('btn-primary');
+    longBreakBtn.classList.remove('btn-primary');
+    longBreakBtn.classList.add('btn-secondary');
 
     pomodoroBtnClicked = false;
     shortBreakBtnClicked = true;
@@ -57,9 +63,15 @@ shortBreakBtn.addEventListener('click', () => {
 })
 
 longBreakBtn.addEventListener('click', () => {
-    longBreakBtn.style.backgroundColor = 'red';
-    pomodoroBtn.style.backgroundColor = 'grey';
-    shortBreakBtn.style.backgroundColor = 'grey';
+    resetTime();
+    
+    
+    pomodoroBtn.classList.remove('btn-primary');
+    pomodoroBtn.classList.add('btn-secondary');
+    shortBreakBtn.classList.remove('btn-primary');
+    shortBreakBtn.classList.add('btn-secondary');
+    longBreakBtn.classList.remove('btn-secondary');
+    longBreakBtn.classList.add('btn-primary');
 
     pomodoroBtnClicked = false;
     shortBreakBtnClicked = false;
@@ -100,6 +112,20 @@ function timesUp() {
         muteBtnPressed();
     }
     
+}
+
+function resetTime() {
+    clearInterval(counting);
+    countdown.innerHTML = `00:00`;
+    time = 0;
+    output.innerHTML = "";
+    enableBtns();
+    audio.pause();
+    audio.load();
+}
+
+function startCounter() {
+    counting = setInterval(updateCountUp, 1000);
 }
 
 function disableBtns() {

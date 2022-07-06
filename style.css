@@ -3,9 +3,10 @@
 }
 
 #countUp {
-    font-size: 36px;
+    font-size: 5em;
+    font-weight: bold;
 }
-
+/* 
 #pomodoro {
     background-color: red;
 }
@@ -13,6 +14,7 @@
 #shortBreak, #longBreak {
     background-color: grey;
 }
+
 
 #start {
     background-color: green;
@@ -23,3 +25,4 @@
     background-color: red;
     color: white;
 }
+*/
