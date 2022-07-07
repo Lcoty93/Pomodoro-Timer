@@ -1,6 +1,9 @@
 # Pomodoro-Timer
-Life-Hack!
-Pomodoro-Timer with a twist, that times UP and not down. Having a counter that counts down may tend to stress you out, instead have a counter that counts up, so you are now aware of the time and not on a deadline. This feels more like a stopwatch giving yourself 25 minutes of working so you know how long you have been doing something instead of the feeling of a deadline. If you have anxiety or get stressed out impending deadlines, this will feel way better. Please give it a try!
+Pomodoro-Timer with a twist! The timer that counts UP and not down. Having a counter that counts down may tend
+Having a counter that counts down may tend to cause stress; instead try having a counter that counts up! Now you are aware of 
+the time and not set on a deadline. This app provides you with 25 minutes of dedicated focus, instead of the impending feeling 
+of a time limit. If you have anxiety or become stressed when time is running out, this “stopwatch” will feel way better. 
+Give it a try!
 
 
-![image](https://user-images.githubusercontent.com/77794520/176898460-ded31368-6b6b-4117-951b-55dc0431037d.png)
+![image](https://user-images.githubusercontent.com/77794520/177667302-edb65a8a-0231-4b37-a35a-15629d5a4542.png)
