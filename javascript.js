@@ -23,6 +23,7 @@ startBtn.addEventListener('click', () => {
 
 stopBtn.addEventListener('click', () => {
     clearInterval(counting);
+    enableBtns();
 })
 
 resetBtn.addEventListener('click', () => {
@@ -130,6 +131,7 @@ function resetTime() {
 
 function startCounter() {
     counting = setInterval(updateCountUp, 1000);
+    startBtn.disabled = true;
 }
 
 function disableBtns() {
